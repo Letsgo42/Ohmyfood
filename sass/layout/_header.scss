@@ -1,24 +1,29 @@
 @use '../utils/mixins' as *;
 @use '../utils/variables' as *;
 @use '../base/typography' as *;
+@use '../components/logo' as *;
 
 header {
-  display: flex;
+  @include flex-center;
   flex-direction: column;
-  align-items: center;
   margin-top: 10px;
-  .logo, 
-  .location  {
-    @include flex-center;
-    padding: $base-size;
-    width: 100%;
+  @include media-tablet {
+    flex-direction: row;
+    margin : 0;
   }
+
   .logo {
-    border-bottom: 4px solid $darker-grey;
+    @include logo;
   }
-  .location {
+
+  .location  {
+    @include logo;
+    @include media-tablet {
+      padding: 24px;
+    }
     color:rgb(70, 70, 70);
-    background-color: $background-grey;
+    background-color: $background-grey-color;
+    border-top: 4px solid $darker-grey;
     font-size: 20px;
     &__text {
       font-family: $text-font;

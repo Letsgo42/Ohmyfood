@@ -1,16 +1,9 @@
+@use './base/reset';
 @use './utils/variables';
 @use './utils/mixins';
 @use './base/typography';
-@use './layouts/header';
+@use './layout/header';
 
-
-
-
-* {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-}
 
 body {
 	margin:auto;

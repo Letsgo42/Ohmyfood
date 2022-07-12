@@ -1,0 +1,8 @@
+@use '../utils/mixins' as *;
+@use '../utils/variables' as *;
+
+@mixin logo {
+  @include flex-center;
+  padding: $base-size;
+  width: 100%;
+}
