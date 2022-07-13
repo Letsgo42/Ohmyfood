@@ -1,5 +1,5 @@
-@use '../utils/mixins' as *;
-@use '../utils/variables' as *;
+@use '../utilities/mixins' as *;
+@use '../utilities/variables' as *;
 @use '../base/typography' as *;
 @use '../components/logo' as *;
 
@@ -18,17 +18,20 @@ header {
 
   .location  {
     @include logo;
+    padding-left: 125px;
+    border-top: 4px solid $darker-grey;
+    color:rgb(70, 70, 70);
+    background-color: rgb(230,230,230);
+    font-size: 20px;
     @include media-tablet {
       padding: 24px;
     }
-    color:rgb(70, 70, 70);
-    background-color: $background-grey-color;
-    border-top: 4px solid $darker-grey;
-    font-size: 20px;
     &__text {
+      padding-left: $base-size;
       font-family: $text-font;
       font-weight: 900;
-      padding-left: $base-size;
+      background-color: transparent;
+      border-color: transparent;
     }
   }
 }

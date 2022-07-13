@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10px;
+}
+@media (min-width: 600px) {
+  header {
+    flex-direction: row;
+    margin: 0;
+  }
+}
+header .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 18px;
+  width: 100%;
+}
+header .location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 18px;
+  width: 100%;
+  padding-left: 125px;
+  border-top: 4px solid rgb(190, 190, 190);
+  color: rgb(70, 70, 70);
+  background-color: rgb(230, 230, 230);
+  font-size: 20px;
+}
+@media (min-width: 600px) {
+  header .location {
+    padding: 24px;
+  }
+}
+header .location__text {
+  padding-left: 18px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+#title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px 35px;
+  background-color: rgb(245, 245, 245);
+  text-align: center;
+}
+#title h1 {
+  margin: 0;
+  font-size: 30px;
+}
+#title p {
+  padding: 18px 0;
+  color: rgb(110, 110, 110);
+  font-size: 24px;
+}
+#title .btn--gradient {
+  padding: 20px 25px;
+  margin: 18px;
+  border-radius: 40px;
+  border-style: none;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  background-image: linear-gradient(160deg, #FF79DA, #9356DC);
+  box-shadow: 2px 10px 10px lightgrey;
+}
+#title .btn--gradient:hover {
+  background-image: linear-gradient(160deg, #ff93e1, #a16be0);
+  box-shadow: 2px 12px 10px 8px lightgray;
+  cursor: pointer;
+}
+
+body {
+  margin: auto;
+  font-family: "Roboto", sans-serif;
+}

@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Ohmyfood</title>
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -13,13 +13,18 @@
 		<div class="logo">
 			<img src="./images/logo/ohmyfood@2x.svg" alt="Ohmyfood logo">
 		</div>
-		<div class="location">
+		<form class="location">
 			<i class="fa-solid fa-location-dot icon location__icon"></i>
-			<p class="location__text">
-				Paris, Belleville
-			</p>
-		</div>
+			<input class="location__text" type="text" placeholder="Paris, Belleville" name="location">
+		</form>
 	</header>
+	<main>
+		<section id="title">
+			<h1>Réservez le menu qui vous convient</h1>
+			<p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+			<input class="btn btn--gradient" type="button" value="Explorer nos restaurants">
+		</section>
+	</main>
 </body>
 
 </html>

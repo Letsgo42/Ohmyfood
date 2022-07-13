@@ -1,4 +1,4 @@
-@use '../utils/variables' as *;
+@use '../utilities/variables' as *;
 
 @mixin flex-center {
   display: flex;
@@ -7,7 +7,7 @@
 }
 
 @mixin media-tablet {
-  @media (min-width: map-get($breakpoints, tablet)) {
+  @media (min-width: map-get($breakpoints, medium)) {
     @content;
   }
 }
