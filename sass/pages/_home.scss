@@ -75,6 +75,11 @@ h2 {
   .menu {
     list-style-type: none;
     counter-reset: item;
+    @include media-tablet {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
     li:before {
         content: counter(item) "  ";
         counter-increment: item;

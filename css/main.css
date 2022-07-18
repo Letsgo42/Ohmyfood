@@ -57,7 +57,6 @@ header a {
   justify-content: center;
   align-items: center;
   padding: 18px;
-  margin-top: 10px;
   width: 100%;
   justify-content: flex-start;
   width: 25%;
@@ -71,7 +70,6 @@ header .logo {
   justify-content: center;
   align-items: center;
   padding: 18px;
-  margin-top: 10px;
   width: 100%;
   justify-content: flex-start;
   width: 75%;
@@ -126,6 +124,12 @@ header .logo {
   margin: 30px 0;
   margin-left: 12px;
   padding: 30px 18px;
+}
+@media (min-width: 640px) {
+  .btn--grey,
+.btn--purple {
+    margin-left: 30px;
+  }
 }
 .btn--grey .icon,
 .btn--purple .icon {
@@ -196,12 +200,25 @@ header .logo {
   align-items: center;
   flex-direction: column;
 }
+@media (min-width: 640px) {
+  .cards {
+    flex-direction: initial;
+    flex-wrap: wrap;
+  }
+}
 .cards article {
   height: 350px;
   width: 100%;
   margin: 15px 0;
   border-radius: 20%;
   box-shadow: 2px 8px 15px lightgrey;
+}
+@media (min-width: 640px) {
+  .cards article {
+    height: 300px;
+    width: 310px;
+    margin: 15px 15px;
+  }
 }
 .cards article .cards__container {
   display: flex;
@@ -280,7 +297,6 @@ header .logo {
   justify-content: center;
   align-items: center;
   padding: 18px;
-  margin-top: 10px;
   width: 100%;
 }
 .home-header .logo img {
@@ -292,7 +308,6 @@ header .logo {
   justify-content: center;
   align-items: center;
   padding: 18px;
-  margin-top: 10px;
   width: 100%;
   padding-left: 125px;
   border-top: 4px solid rgb(190, 190, 190);
@@ -349,6 +364,13 @@ h2 {
 #fonctionnement .menu {
   list-style-type: none;
   counter-reset: item;
+}
+@media (min-width: 640px) {
+  #fonctionnement .menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }
 #fonctionnement .menu li:before {
   content: counter(item) "  ";

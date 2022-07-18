@@ -53,12 +53,23 @@
 .cards {
   @include flex-center;
   flex-direction: column;
+  @include media-tablet {
+    flex-direction: initial;
+    flex-wrap: wrap;
+  }
   article {
     height: 350px;
     width: 100%;
     margin: 15px 0;
     border-radius: 20%;
     box-shadow: 2px 8px 15px lightgrey;
+
+    //Responsive design 640px+
+    @include media-tablet {
+      height: 300px;
+      width: 310px;
+      margin: 15px 15px;
+    }
     .cards__container {
       @include card;
       &--absolute {

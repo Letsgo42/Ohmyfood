@@ -6,6 +6,5 @@
 @mixin logo {
     @include flex-center;
     padding: $base-size;
-    margin-top: 10px;
     width: 100%;
   }
