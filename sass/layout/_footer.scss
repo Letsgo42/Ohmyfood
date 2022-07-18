@@ -1,0 +1,33 @@
+@use '../utilities/variables' as *;
+
+@use '../base/typography' as *;
+
+
+footer {
+  padding: 30px 30px 40px 30px;
+  color: white;
+  background-color: $darker-grey;
+  figure {
+    padding-bottom: 30px;
+    img {
+      width: 140px;
+      height: auto;
+      filter: invert(100%);
+    }
+  }
+  ul {
+    list-style-type: none;
+    li {
+      padding-bottom: 10px;
+      font-size: $button-size;
+    }
+    .icon-item {
+      font-weight: 600;
+      .footer-icon {
+        margin-right: 20px;
+        width: 10px;
+        font-size: $base-size;
+      }
+    }
+  }
+}

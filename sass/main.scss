@@ -1,15 +1,16 @@
-@use './utilities/variables' as *;
-@use './utilities/mixins' as *;
+@use './utilities/variables';
+@use './utilities/mixins';
 
-@use './base/typography' as *;
-@use './base/reset' as *;
+@use './base/typography';
+@use './base/reset';
 
-@use './layout/header' as *;
+@use './layout/footer';
+@use './layout/header';
+@use './layout/menu';
 
-@use './pages/home' as *;
+@use './pages/home';
 
-
-body {
-	margin: auto;
-	font-family: $text-font;
-}
+@use './components/logo';
+@use './components/buttons';
+@use './components/cards';
+@use './components/cover';

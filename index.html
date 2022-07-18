@@ -9,22 +9,120 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-	<header>
-		<div class="logo">
+	<header class="home-header">
+		<figure class="logo">
 			<img src="./images/logo/ohmyfood@2x.svg" alt="Ohmyfood logo">
-		</div>
+		</figure>
 		<form class="location">
 			<i class="fa-solid fa-location-dot icon location__icon"></i>
-			<input class="location__text" type="text" placeholder="Paris, Belleville" name="location">
+			<input class="location__text" type="text" placeholder="Paris, Belleville" infos="location">
 		</form>
 	</header>
 	<main>
 		<section id="title">
 			<h1>Réservez le menu qui vous convient</h1>
-			<p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-			<input class="btn btn--gradient" type="button" value="Explorer nos restaurants">
+			<p>Découvrez des  d'exception, sélectionnés par nos soins.</p>
+			<a href="#"><button class="btn btn--gradient" type="button">Explorer nos restaurants</a>
+		</section>
+		<section id="fonctionnement">
+			<h2>Fonctionnement</h2>
+			<ol class="menu">
+				<li class="btn btn--grey">
+					<i class="fa-solid fa-mobile-screen-button icon"></i>
+					Choisissez un restaurant
+				</li>
+				<li class="btn btn--grey">
+					<i class="fa-solid fa-list icon"></i>
+					Composez votre menu
+				</li>
+				<li class="btn btn--grey btn--purple">
+					<i class="fa-solid fa-store icon"></i>
+					Dégustez au restaurant
+				</li>
+			</ol>
+		</section>
+		<section id="restaurants">
+			<h2>Restaurants</h2>
+			<div class="cards">
+				<article>
+					<a class="cards__container cards__palette" href="./pages/la-palette.html">
+						<img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="joli plat">
+						<p class="cards__container--absolute">Nouveau</p>
+						<div class="infos-fav">
+							<div class="infos">
+								<h3>La palette du goût</h3>
+								<p>Ménilmontant</p>
+							</div>
+							<div class="fav">
+								<i class="fa-solid fa-heart heart-icon"></i>
+							</div>
+						</div>
+					</a>
+				</article>
+				<article>
+					<a class="cards__container cards__note" href="la-note.html">
+						<img src="./images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="joli plat">
+						<p class="cards__container--absolute">Nouveau</p>
+						<div class="infos-fav">
+							<div class="infos">
+								<h3>La note enchantée</h3>
+								<p>Charonne</p>
+							</div>
+							<div class="fav">
+								<i class="fa-solid fa-heart heart-icon"></i>
+							</div>
+						</div>
+					</a>
+				</article>
+				<article>
+					<a class="cards__container cards__francaise" href="la-francaise.html">
+						<img src="./images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="joli plat">
+						<div class="infos-fav">
+							<div class="infos">
+								<h3>À la française</h3>
+								<p>Cité Rouge</p>
+							</div>
+							<div class="fav">
+								<i class="fa-solid fa-heart heart-icon"></i>
+							</div>
+						</div>
+					</a>
+				</article>
+				<article>
+					<a class="cards__container cards__delice" href="le-delice.html">
+						<img src="./images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="joli plat">
+						<div class="infos-fav">
+							<div class="infos">
+								<h3>Le délice des sens</h3>
+								<p>Folie-Méricourt</p>
+							</div>
+							<div class="fav">
+								<i class="fa-solid fa-heart heart-icon"></i>
+							</div>
+						</div>
+					</a>
+				</article>
+			</div>
 		</section>
 	</main>
+	<footer>
+		<figure>
+			<img src="./images/logo/ohmyfood@2x.svg" alt="Small Ohmyfood logo">
+		</figure>
+		<ul>
+			<li class="icon-item"><a href="#">
+				<i class="fa-solid fa-utensils footer-icon"></i>
+				Proposer un restaurant
+				</a>
+			</li>
+			<li class="icon-item"><a href="#">
+				<i class="fa-solid fa-handshake-angle footer-icon"></i>
+				Devenir partenaire
+				</a>
+			</li>
+			<li><a href="#">Mentions légales</a></li>
+			<li><a href="mailto:svetlananov21@pickuplanet.com">Contact</a></li>
+		</ul>
+	</footer>
 </body>
-
 </html>

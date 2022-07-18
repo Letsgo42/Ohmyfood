@@ -1,0 +1,76 @@
+@use '../utilities/mixins' as *;
+@use '../utilities/variables' as *;
+
+@use '../base/typography' as *;
+  
+
+@mixin card {
+  display: flex;
+  justify-content: space-between;
+  flex-direction:column;
+  width: 100%;
+  height: 100%;
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 70%;
+    border-radius: 20px 20px 0 0;
+  }
+  .infos-fav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 22px;
+    height: 30%;
+    color: black;
+    background-color: #fff;
+    border-radius: 0 0 20px 20px;
+    .infos {
+      display:flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      font-size: $button-size;
+      p {
+        color: $grey;
+        font-size: 22px;
+      }
+    }
+    .fav {
+      @include flex-center;
+      padding-bottom: 10px;
+      padding-right: 10px;
+      .heart-icon {
+        @include heart-icon;
+        &:hover{
+          color: transparent;
+          background-color: $gradient;
+          text-shadow: none;
+        }
+      }
+    }
+  }
+}
+
+.cards {
+  @include flex-center;
+  flex-direction: column;
+  article {
+    height: 350px;
+    width: 100%;
+    margin: 15px 0;
+    border-radius: 20%;
+    box-shadow: 2px 8px 15px lightgrey;
+    .cards__container {
+      @include card;
+      &--absolute {
+        position:absolute;
+        right: 30px;
+        padding: 12px 15px;
+        width: 100px;
+        background-color: $tertiary-color;
+        color: darken($tertiary-color, 40%);
+        font-size: $base-size;
+        font-weight: bold;
+      }
+    }
+  }
+}

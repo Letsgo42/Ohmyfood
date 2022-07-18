@@ -1,5 +1,8 @@
 @use '../utilities/variables' as *;
 
+@use '../base/typography' as *;
+
+
 @mixin flex-center {
   display: flex;
   justify-content: center;
@@ -10,4 +13,21 @@
   @media (min-width: map-get($breakpoints, medium)) {
     @content;
   }
+}
+
+@mixin heart-icon {
+  font-size: 30px;
+  color: white;
+  text-shadow: 0 0 3px #000;
+}
+
+@mixin restaurant-title {
+  @include flex-center;
+  justify-content: space-around;
+  border-radius: 50px 50px 0 0;
+  background-color: $background-grey;
+  font-family: $title-font;
+  padding: 30px 0;
+  position: relative;
+  top: -70px;
 }

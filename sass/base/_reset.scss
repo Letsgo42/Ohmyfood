@@ -1,5 +1,21 @@
+@use '../base/typography' as *;
+
+
 * {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+}
+
+body {
+	margin: auto;
+	font-family: $text-font;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+	&:visited {
+		text-decoration: none;
+	}
 }

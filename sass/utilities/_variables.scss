@@ -2,14 +2,13 @@
 $primary-color: #9356DC;
 $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
-$background-color: rgb(245,245,245);
-$darker-grey: rgb(190, 190, 190);
-
-// Sizes
-$base-size: 18px;
+$background-grey: rgb(245,245,245);
+$grey: rgb(110, 110, 110);
+$darker-grey: rgb(70,70,70);
+$gradient: linear-gradient(160deg, $secondary-color, $primary-color);
 
 // Breakpoints
 $breakpoints: (
-  medium: 600px,
-  large: 1000px,
+  medium: 640px,
+  large: 1024px,
 );

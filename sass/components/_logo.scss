@@ -1,8 +1,11 @@
 @use '../utilities/mixins' as *;
-@use '../utilities/variables' as *;
+
+@use '../base/typography' as *;
+
 
 @mixin logo {
-  @include flex-center;
-  padding: $base-size;
-  width: 100%;
-}
+    @include flex-center;
+    padding: $base-size;
+    margin-top: 10px;
+    width: 100%;
+  }

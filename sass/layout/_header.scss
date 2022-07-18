@@ -1,41 +1,40 @@
 @use '../utilities/mixins' as *;
 @use '../utilities/variables' as *;
+
 @use '../base/typography' as *;
+
 @use '../components/logo' as *;
+@use '../components/cover' as *;
+
 
 header {
   @include flex-center;
-  flex-direction: column;
-  margin-top: 10px;
-  @include media-tablet {
-    flex-direction: row;
-    margin : 0;
+  a {
+    @include logo;
+    justify-content: flex-start;
+    width: 25%;
+    color: $darker-grey;
+    .header-arrow {
+      font-size: 25px;
+    }
   }
-
   .logo {
     @include logo;
-  }
-
-  .location  {
-    @include logo;
-    padding-left: 125px;
-    border-top: 4px solid $darker-grey;
-    color:rgb(70, 70, 70);
-    background-color: rgb(230,230,230);
-    font-size: 20px;
-    @include media-tablet {
-      padding: 24px;
-    }
-    &__text {
-      padding-left: $base-size;
-      font-family: $text-font;
-      font-weight: 900;
-      background-color: transparent;
-      border-color: transparent;
-    }
+    justify-content: flex-start;
+    width: 75%;
   }
 }
 
+@include cover;
 
-
-
+.restaurant-title {
+  @include restaurant-title;
+  h1 {
+    font-weight: 400;
+  }
+  .heart-icon {
+    @include heart-icon;
+    color: $background-grey;
+    font-size: 28px;
+  }
+}
