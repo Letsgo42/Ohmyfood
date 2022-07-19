@@ -72,6 +72,8 @@
     }
     .cards__container {
       @include card;
+
+      // "NOUVEAU"
       &--absolute {
         position:absolute;
         right: 30px;

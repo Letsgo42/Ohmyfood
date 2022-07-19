@@ -2,11 +2,38 @@
 @use '../utilities/mixins' as *;
 
 @use '../base/typography' as *;
+@use '../base/reset';
 
 @use '../components/buttons' as *;
 
 
 #menu {
   background-color: $background-grey;
+  @include flex-center;
+  align-items: initial;
+  flex-direction: column;
+  .menu__service {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 15px 18px;
+    h2 {
+      align-self: flex-start;
+      margin: 10px 0;
+      padding-bottom: 6px;
+      border-bottom: 4px solid $tertiary-color;
+      color: $grey;
+      font-size : $button-size;
+      font-weight: 400;
+    }
+  }
+  
+}
+
+.btn--gradient {
+  align-self: center;
+  padding: 22px 70px;
+  margin-top: 30px;
+  margin-bottom: 70px;
 }
 
