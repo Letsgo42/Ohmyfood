@@ -23,12 +23,15 @@
 
 @mixin restaurant-title {
   @include flex-center;
-  justify-content: space-around;
+  justify-content: space-between;
   border-radius: 50px 50px 0 0;
   background-color: $background-grey;
   font-family: $title-font;
-  padding: 30px 0;
+  padding: 25px $base-size;
   position: relative;
   top: -70px;
   margin-bottom: -95px;
+  .heart-icon {
+    margin-right: $button-size;
+  }
 }

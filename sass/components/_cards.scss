@@ -4,6 +4,7 @@
 @use '../base/typography' as *;
   
 
+//CARTE RESTAURANT HOMEPAGE
 @mixin card {
   display: flex;
   justify-content: space-between;
@@ -50,6 +51,7 @@
   }
 }
 
+//MENU RESTAURANTS HOMEPAGE
 .cards {
   @include flex-center;
   flex-direction: column;
@@ -72,7 +74,6 @@
     }
     .cards__container {
       @include card;
-
       // "NOUVEAU"
       &--absolute {
         position:absolute;
