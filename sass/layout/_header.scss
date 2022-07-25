@@ -7,12 +7,13 @@
 @use '../components/cover' as *;
 
 
+//LOGO AND ARROW DISPLAY ON RESTAURANTS PAGES
 header {
   @include flex-center;
   a {
     @include logo;
     justify-content: flex-start;
-    width: 25%;
+    width: auto;
     color: $darker-grey;
     .header-arrow {
       font-size: 25px;
@@ -20,21 +21,17 @@ header {
   }
   .logo {
     @include logo;
-    justify-content: flex-start;
-    width: 75%;
   }
 }
 
+//COVER DISPLAY
 @include cover;
 
+//RESTAURANT TITLE DISPLAY
 .restaurant-title {
   @include restaurant-title;
   h1 {
     font-weight: 400;
   }
-  .heart-icon {
-    @include heart-icon;
-    color: $background-grey;
-    font-size: 28px;
-  }
+  @include heart-icon;
 }

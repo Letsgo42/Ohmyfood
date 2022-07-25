@@ -18,6 +18,57 @@ a:visited {
   text-decoration: none;
 }
 
+.btn--white {
+  position: relative;
+  top: -200px;
+  opacity: 0;
+  animation-name: slide;
+  animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  animation-delay: 0.7s;
+  animation-duration: 1.4s;
+  animation-fill-mode: forwards;
+}
+.btn--white .infos-plat {
+  padding: 18px 18px;
+  width: 95%;
+}
+.btn--white .check-anim {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 0%;
+  border-radius: 0 20px 20px 0;
+  background-color: #99E2D0;
+  color: white;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition-duration: 500ms;
+  transform-origin: right;
+}
+.btn--white .check-anim .check {
+  font-size: 30px;
+  transform: rotate(-360deg);
+}
+.btn--white:hover .infos-plat {
+  width: 80%;
+}
+.btn--white:hover .check-anim {
+  width: 20%;
+}
+.btn--white:hover .check-anim .check {
+  transform: rotate(0deg);
+}
+
+@keyframes slide {
+  0% {
+    top: -300px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
 footer {
   padding: 30px 30px 40px 30px;
   color: white;
@@ -31,12 +82,31 @@ footer figure img {
   height: auto;
   filter: invert(100%);
 }
+@media (min-width: 1024px) {
+  footer figure img {
+    width: 160px;
+  }
+}
 footer ul {
   list-style-type: none;
 }
+@media (min-width: 1024px) {
+  footer ul {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+  }
+}
 footer ul li {
+  margin-right: 30px;
+  padding-right: 10px;
   padding-bottom: 10px;
   font-size: 21px;
+}
+@media (min-width: 1024px) {
+  footer ul li {
+    font-size: 23px;
+  }
 }
 footer ul .icon-item {
   font-weight: 600;
@@ -60,7 +130,7 @@ header a {
   padding-bottom: 15px;
   width: 100%;
   justify-content: flex-start;
-  width: 25%;
+  width: auto;
   color: rgb(70, 70, 70);
 }
 header a .header-arrow {
@@ -73,8 +143,6 @@ header .logo {
   padding: 18px;
   padding-bottom: 15px;
   width: 100%;
-  justify-content: flex-start;
-  width: 75%;
 }
 
 .big-restaurant-picture {
@@ -92,26 +160,49 @@ header .logo {
   justify-content: center;
   align-items: center;
   justify-content: space-between;
-  border-radius: 50px 50px 0 0;
-  background-color: rgb(245, 245, 245);
-  font-family: "Shrikhand", cursive;
   padding: 25px 18px;
   position: relative;
   top: -70px;
   margin-bottom: -95px;
+  border-radius: 50px 50px 0 0;
+  background-color: rgb(245, 245, 245);
+  font-family: "Shrikhand", cursive;
+}
+@media (min-width: 1024px) {
+  .restaurant-title {
+    justify-content: space-around;
+    padding: 50px 18px;
+  }
+}
+@media (min-width: 1024px) {
+  .restaurant-title h1 {
+    font-size: 40px;
+  }
 }
 .restaurant-title .heart-icon {
-  margin-right: 21px;
+  font-size: 30px;
+  transition: font-weight 2s ease;
+}
+.restaurant-title .heart-icon:hover {
+  font-weight: 900;
+  background-image: linear-gradient(160deg, #FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .restaurant-title h1 {
   font-weight: 400;
 }
 .restaurant-title .heart-icon {
   font-size: 30px;
-  color: white;
-  text-shadow: 0 0 3px #000;
-  color: rgb(245, 245, 245);
-  font-size: 28px;
+  transition: font-weight 2s ease;
+}
+.restaurant-title .heart-icon:hover {
+  font-weight: 900;
+  background-image: linear-gradient(160deg, #FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .btn {
@@ -139,7 +230,7 @@ header .logo {
 }
 .btn--grey .icon,
 .btn--purple .icon {
-  margin: 0 30px;
+  margin: 0 25px;
   font-size: 25px;
 }
 
@@ -155,23 +246,14 @@ header .logo {
 .btn--grey:hover {
   cursor: pointer;
 }
-.btn--grey .icon {
-  color: rgb(110, 110, 110);
-}
-
-.btn--purple {
-  border-radius: 20px;
-  font-size: 21px;
-  font-weight: 600;
-  color: black;
-  box-shadow: 2px 5px 5px lightgrey;
+.btn--grey:hover {
   background-color: #f2eafb;
 }
-.btn--purple:hover {
-  cursor: pointer;
-}
-.btn--purple .icon {
+.btn--grey:hover .icon {
   color: #9356DC;
+}
+.btn--grey .icon {
+  color: rgb(110, 110, 110);
 }
 
 .btn--gradient {
@@ -202,16 +284,33 @@ header .logo {
   font-weight: 600;
   color: black;
   box-shadow: 2px 5px 5px lightgrey;
+  display: flex;
   margin: 10px 0;
-  padding: 18px 18px;
   background-color: #fff;
 }
 .btn--white:hover {
   cursor: pointer;
 }
+@media (min-width: 1024px) {
+  .btn--white {
+    align-self: center;
+    width: 72%;
+  }
+}
 .btn--white h3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 40px;
   margin-bottom: 5px;
   font-size: 21px;
+}
+@media (min-width: 1024px) {
+  .btn--white h3 {
+    font-size: 25px;
+  }
 }
 .btn--white .prix-flex {
   display: flex;
@@ -219,6 +318,18 @@ header .logo {
   color: rgb(110, 110, 110);
   font-size: 18px;
   font-weight: 400;
+}
+@media (min-width: 1024px) {
+  .btn--white .prix-flex {
+    font-size: 22px;
+  }
+}
+.btn--white .prix-flex .txt--ellipsis {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .btn--white .prix-flex .prix {
   color: rgb(70, 70, 70);
@@ -247,6 +358,11 @@ header .logo {
   color: rgb(110, 110, 110);
   font-size: 21px;
   font-weight: 400;
+}
+@media (min-width: 1024px) {
+  #menu .menu__service h2 {
+    align-self: center;
+  }
 }
 
 .btn--commander {
@@ -278,7 +394,7 @@ header .logo {
 @media (min-width: 640px) {
   .cards article {
     height: 300px;
-    width: 310px;
+    width: 400px;
     margin: 15px 15px;
   }
 }
@@ -288,6 +404,7 @@ header .logo {
   flex-direction: column;
   width: 100%;
   height: 100%;
+  position: relative;
 }
 .cards article .cards__container img {
   object-fit: cover;
@@ -323,18 +440,20 @@ header .logo {
 }
 .cards article .cards__container .infos-fav .fav .heart-icon {
   font-size: 30px;
-  color: white;
-  text-shadow: 0 0 3px #000;
+  transition: font-weight 2s ease;
 }
 .cards article .cards__container .infos-fav .fav .heart-icon:hover {
-  color: transparent;
-  background-color: linear-gradient(160deg, #FF79DA, #9356DC);
-  text-shadow: none;
+  font-weight: 900;
+  background-image: linear-gradient(160deg, #FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .cards article .cards__container--absolute {
   position: absolute;
-  right: 30px;
-  padding: 12px 15px;
+  top: 15px;
+  right: 15px;
+  padding: 10px 15px;
   width: 100px;
   background-color: #99E2D0;
   color: #278870;
@@ -432,7 +551,7 @@ header .logo {
 @media (min-width: 640px) {
   #fonctionnement .menu {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-wrap: wrap;
   }
 }

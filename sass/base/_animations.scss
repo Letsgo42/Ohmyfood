@@ -1,0 +1,53 @@
+@use '../utilities/mixins' as *;
+@use '../utilities/variables' as *;
+
+@use '../base/typography' as *;
+
+
+.btn--white {
+  position: relative;
+  top: -200px;
+  opacity: 0;
+  animation-name: slide;
+  animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  animation-delay: 0.7s;
+  animation-duration: 1.4s;
+  animation-fill-mode: forwards;
+  .infos-plat {
+    padding: 18px 18px;
+    width: 95%;
+  }
+  .check-anim {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 0%;
+    border-radius: 0 20px 20px 0;
+    background-color: $third-color;
+    color: white;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    transition-duration: 500ms;
+    transform-origin: right;
+    .check {
+      font-size: $title-size;
+      transform:rotate(-360deg);
+    }
+  }
+  &:hover {
+    .infos-plat {
+      width: 80%;
+    }
+    .check-anim {
+      width: 20%;
+      .check {
+        transform:rotate(0deg);
+      }
+    }
+  }
+}
+
+@keyframes slide {
+  0% {top: -300px; opacity: 0;}
+  100% {top: 0; opacity: 1;}
+}

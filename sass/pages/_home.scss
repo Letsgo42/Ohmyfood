@@ -8,10 +8,11 @@
 @use '../components/logo' as *;
 
 
+//HEADER
 .home-header {
   @include flex-center;
   flex-direction: column;
-  @include media-tablet {
+  @include media-medium {
     flex-direction: row;
     margin : 0;
   }
@@ -29,7 +30,7 @@
     color: $darker-grey;
     background-color: rgb(230,230,230);
     font-size: 20px;
-    @include media-tablet {
+    @include media-medium {
       padding: 24px;
     }
     &__text {
@@ -42,6 +43,7 @@
   }
 }
 
+//GENERAL
 #title,
 #fonctionnement,
 #restaurants {
@@ -64,20 +66,22 @@
   }
 }
 
+//TITLE
 .section-title {
   align-self: flex-start;
   font-size: $title-size;
   margin-bottom: $base-size;
 }
 
+//FONCTIONNEMENT
 #fonctionnement {
   align-items: initial;
   .menu {
     list-style-type: none;
     counter-reset: item;
-    @include media-tablet {
+    @include media-medium {
       display: flex;
-      justify-content: center;
+      justify-content: space-evenly;
       flex-wrap: wrap;
     }
     li:before {
@@ -93,6 +97,7 @@
   }
 }
 
+//RESTAURANTS
 #restaurants {
   background-color: $background-grey;
   align-items: initial;

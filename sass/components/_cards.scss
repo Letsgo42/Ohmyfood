@@ -39,14 +39,7 @@
       @include flex-center;
       padding-bottom: 10px;
       padding-right: 10px;
-      .heart-icon {
-        @include heart-icon;
-        &:hover{
-          color: transparent;
-          background-color: $gradient;
-          text-shadow: none;
-        }
-      }
+      @include heart-icon;
     }
   }
 }
@@ -55,7 +48,7 @@
 .cards {
   @include flex-center;
   flex-direction: column;
-  @include media-tablet {
+  @include media-medium {
     flex-direction: initial;
     flex-wrap: wrap;
   }
@@ -67,21 +60,23 @@
     box-shadow: 2px 8px 15px lightgrey;
 
     //Responsive design 640px+
-    @include media-tablet {
+    @include media-medium {
       height: 300px;
-      width: 310px;
+      width: 400px;
       margin: 15px 15px;
     }
     .cards__container {
       @include card;
+      position: relative;
       // "NOUVEAU"
       &--absolute {
         position:absolute;
-        right: 30px;
-        padding: 12px 15px;
+        top: 15px;
+        right: 15px;
+        padding: 10px 15px;
         width: 100px;
-        background-color: $tertiary-color;
-        color: darken($tertiary-color, 40%);
+        background-color: $third-color;
+        color: darken($third-color, 40%);
         font-size: $base-size;
         font-weight: bold;
       }
