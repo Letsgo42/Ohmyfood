@@ -4,19 +4,22 @@
 @use '../base/typography' as *;
 
 
+//Slide Menu
 .btn--white {
   position: relative;
-  top: -200px;
+  top: -30px;
   opacity: 0;
   animation-name: slide;
   animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
   animation-delay: 0.7s;
   animation-duration: 1.4s;
   animation-fill-mode: forwards;
+  overflow: hidden;
   .infos-plat {
     padding: 18px 18px;
-    width: 95%;
+    width: 100%;
   }
+  //Dish Selection
   .check-anim {
     display: flex;
     justify-content: center;
@@ -28,26 +31,30 @@
     transition-property: all;
     transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
     transition-duration: 500ms;
-    transform-origin: right;
     .check {
       font-size: $title-size;
-      transform:rotate(-360deg);
+      transform:rotate(-1turn);
     }
   }
   &:hover {
-    .infos-plat {
-      width: 80%;
-    }
     .check-anim {
-      width: 20%;
+      width: 120px;
+      transform-origin: right;
+      -webkit-transform-origin: right;
+      transform:translate(-0px);
       .check {
-        transform:rotate(0deg);
+        animation: check 500ms ease-in-out 1 forwards;
       }
     }
   }
 }
 
 @keyframes slide {
-  0% {top: -300px; opacity: 0;}
+  0% {top: -100px; opacity: 0;}
   100% {top: 0; opacity: 1;}
+}
+
+@keyframes check {
+  0% {transform:rotate(-360deg)}
+  100% {transform:rotate(360deg)}
 }

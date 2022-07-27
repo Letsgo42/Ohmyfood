@@ -4,7 +4,7 @@
 @use '../base/typography' as *;
   
 
-//CARTE RESTAURANT HOMEPAGE
+//RESTAURANTS CARDS HOMEPAGE
 @mixin card {
   display: flex;
   justify-content: space-between;
@@ -17,10 +17,11 @@
     height: 70%;
     border-radius: 20px 20px 0 0;
   }
+  //Text & Heart Icon
   .infos-fav {
     display: flex;
     justify-content: space-between;
-    padding: 10px 22px;
+    padding: 10px $base-size;
     height: 30%;
     color: black;
     background-color: #fff;
@@ -29,6 +30,7 @@
       display:flex;
       flex-direction: column;
       justify-content: space-evenly;
+      padding-right: $base-size;
       font-size: $button-size;
       p {
         color: $grey;
