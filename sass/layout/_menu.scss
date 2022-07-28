@@ -20,14 +20,27 @@
     padding: 15px 18px;
     h2 {
       align-self: flex-start;
-      margin: 10px 0;
-      padding-bottom: 6px;
-      border-bottom: 4px solid $third-color;
+      margin-top: 10px;
       color: $grey;
       font-size : $button-size;
       font-weight: 400;
       @include media-large {
         align-self: center;
+        border-bottom: solid 4px $third-color;
+        padding-bottom: 6px;
+        margin-bottom: 10px;
+        
+      }
+    }
+    hr {
+      margin-top: 6px;
+      margin-bottom: 6px;
+      height: 4px;
+      width: 50px;
+      background-color: $third-color;
+      border: none;
+      @include media-large {
+        display: none;
       }
     }
   }

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name ="viewport" content="width=device-width, initial-scale=1.0">
   <title>La note enchantée</title>
-  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/prefixed/style.css">
 	<link rel="stylesheet" href="../css/normalize.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -25,12 +25,16 @@
   <!-- TITRE -->
   <div class="restaurant-title">
     <h1>La note enchantée</h1>
-    <i class="fa-regular fa-heart heart-icon"></i>
+    <div class="fav">
+      <i class="fa-regular fa-heart heart-icon"></i>
+      <i class="fa-regular fa-heart heart-icon heart-icon--opacity"></i>
+    </div>
   </div>
   <!-- MENU -->
   <main id="menu">
     <section class="menu__service menu__entrees">
       <h2>ENTRÉES</h2>
+      <hr>
       <article class="btn--white">
         <div class="infos-plat">
           <h3>Raviole de foie gras</h3>
@@ -83,6 +87,7 @@
     <!-- PLATS -->
     <section class="menu__service menu__plats">
       <h2>PLATS</h2>
+      <hr>
       <article class="btn--white">
         <div class="infos-plat">
           <h3>Noix de coquilles Saint-Jacques</h3>
@@ -123,6 +128,7 @@
     <!-- DESSERTS -->
     <section class="menu__service menu__desserts">
       <h2>DESSERTS</h2>
+      <hr>
       <article class="btn--white">
         <div class="infos-plat">
           <h3>Macaron noisette et chocolat</h3>
@@ -161,7 +167,7 @@
       </article>
     </section>
     <!-- BOUTON -->
-    <a href="#"><button class="btn--gradient btn--commander" type="button">Commander</a>
+    <button class="btn--gradient btn--commander" type="button">Commander</button>
   </main>
   <!-- FOOTER -->
   <footer>

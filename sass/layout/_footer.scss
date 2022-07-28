@@ -10,6 +10,10 @@ footer {
   background-color: $darker-grey;
   figure {
     padding-bottom: 30px;
+    @include media-large {
+      display: flex;
+      justify-content: center;
+    }
     img {
       width: 140px;
       height: auto;

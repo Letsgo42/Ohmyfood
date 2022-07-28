@@ -28,7 +28,7 @@
     border-radius: 50%;
     box-shadow: 0 0 0 0 rgba(153, 226, 208) ;
     // PLATE ANIMATION
-    animation: plate 600ms infinite 3.5s forwards;
+    animation: plate 600ms infinite 2s forwards;
     &__inner {
       @include flex-center;
       padding: 105px 45px;
@@ -46,11 +46,11 @@
       }
 
       .oh {
-        animation: oh 1s cubic-bezier(0.23, 1, 0.320, 1) 800ms forwards;
+        animation: oh 1s cubic-bezier(0.23, 1, 0.320, 1) 500ms forwards;
         color: $primary-color;
       }
       .my {
-        animation: my 1s cubic-bezier(0.81, 0.09, 0.58, 1.31) 100ms forwards;
+        animation: my 1s cubic-bezier(0.81, 0.09, 0.58, 1.31) forwards;
         color: $secondary-color;
       }
       .food {
@@ -84,7 +84,7 @@
   }
   100% {
     opacity: 1;
-    transform: translate (0);
+    transform: translate(0);
   }
 }
 

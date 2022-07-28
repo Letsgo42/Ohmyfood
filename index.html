@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Ohmyfood</title>
-	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/prefixed/style.css">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -17,7 +17,7 @@
 		<!-- LOCALISATION -->
 		<form class="location">
 			<i class="fa-solid fa-location-dot icon location__icon"></i>
-			<input class="location__text" type="text" placeholder="Paris, Belleville" infos="location">
+			<input class="location__text" type="text" placeholder="Paris, Belleville">
 		</form>
 	</header>
 	<main>
@@ -25,7 +25,7 @@
 		<section id="title">
 			<h1>Réservez le menu qui vous convient</h1>
 			<p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-			<a href="#restaurants"><button class="btn btn--gradient" type="button">Explorer nos restaurants</a>
+			<button class="btn btn--gradient" type="button">Explorer nos restaurants</button>
 		</section>
 		<!-- FONCTIONNEMENT -->
 		<section id="fonctionnement">
@@ -45,7 +45,7 @@
 				</li>
 			</ol>
 		</section>
-		<!-- CARTES RESTAURANTS -->
+		<!-- RESTAURANTS -->
 		<section id="restaurants">
 			<h2 class="section-title">Restaurants</h2>
 			<div class="cards">
@@ -61,6 +61,7 @@
 							</div>
 							<div class="fav">
 								<i class="fa-regular fa-heart heart-icon"></i>
+								<i class="fa-regular fa-heart heart-icon heart-icon--opacity"></i>
 							</div>
 						</div>
 					</a>
@@ -77,6 +78,7 @@
 							</div>
 							<div class="fav">
 								<i class="fa-regular fa-heart heart-icon"></i>
+								<i class="fa-regular fa-heart heart-icon heart-icon--opacity"></i>
 							</div>
 						</div>
 					</a>
@@ -92,6 +94,7 @@
 							</div>
 							<div class="fav">
 								<i class="fa-regular fa-heart heart-icon"></i>
+								<i class="fa-regular fa-heart heart-icon heart-icon--opacity"></i>
 							</div>
 						</div>
 					</a>
@@ -107,6 +110,7 @@
 							</div>
 							<div class="fav">
 								<i class="fa-regular fa-heart heart-icon"></i>
+								<i class="fa-regular fa-heart heart-icon heart-icon--opacity"></i>
 							</div>
 						</div>
 					</a>

@@ -1,19 +1,33 @@
-@use '../utilities/mixins' as *;
 @use '../utilities/variables' as *;
 
 @use '../base/typography' as *;
 
 
 //Slide Menu
-.btn--white {
-  position: relative;
-  top: -30px;
+.menu__entrees {
+  .btn--white {
+  animation: slide 1.5s cubic-bezier(0.165, 0.84, 0.44, 1) 0.1s forwards;
   opacity: 0;
-  animation-name: slide;
-  animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
-  animation-delay: 0.7s;
-  animation-duration: 1.4s;
-  animation-fill-mode: forwards;
+  }
+}
+
+.menu__plats {
+  .btn--white {
+  animation: slide 1.5s cubic-bezier(0.165, 0.84, 0.44, 1) 0.7s forwards;
+  opacity: 0;
+  }
+}
+
+.menu__desserts {
+  .btn--white {
+  animation: slide 1.5s cubic-bezier(0.165, 0.84, 0.44, 1) 1.3s forwards;
+  opacity: 0;
+  }
+}
+
+
+
+.btn--white {
   overflow: hidden;
   .infos-plat {
     padding: 18px 18px;
@@ -41,7 +55,7 @@
       width: 120px;
       transform-origin: right;
       -webkit-transform-origin: right;
-      transform:translate(-0px);
+      transform:translate(0px);
       .check {
         animation: check 500ms ease-in-out 1 forwards;
       }
@@ -49,12 +63,51 @@
   }
 }
 
+//Heart Icon
+@mixin heart-icon {
+  .fav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 10px;
+    .heart-icon {
+      position: absolute;
+      background: transparent;
+      font-size: 30px;
+    }
+    .heart-icon--opacity {
+      position: absolute;
+      font-weight: 900;
+      background-image:$gradient;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      opacity: 0;
+      transition: opacity 500ms ease;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
 @keyframes slide {
-  0% {top: -100px; opacity: 0;}
-  100% {top: 0; opacity: 1;}
+  0% {
+    transform:translateY(-100px); 
+    opacity: 0;
+  }
+  100% {
+    transform:translateY(0);
+    opacity: 1;
+  }
 }
 
 @keyframes check {
-  0% {transform:rotate(-360deg)}
-  100% {transform:rotate(360deg)}
+  0% {
+    transform:rotate(-360deg);
+  }
+  100% {
+    transform:rotate(360deg);
+  }
 }
