@@ -11,6 +11,8 @@
 //LOGO AND ARROW DISPLAY ON RESTAURANTS PAGES
 header {
   @include flex-center;
+  justify-content: flex-start;
+  position: relative;
   a {
     @include logo;
     justify-content: flex-start;
@@ -22,6 +24,7 @@ header {
   }
   .logo {
     @include logo;
+    position: absolute;
   }
 }
 

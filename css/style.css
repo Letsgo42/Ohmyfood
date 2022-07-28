@@ -142,6 +142,8 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  justify-content: flex-start;
+  position: relative;
 }
 header a {
   display: flex;
@@ -164,6 +166,7 @@ header .logo {
   padding: 18px;
   padding-bottom: 15px;
   width: 100%;
+  position: absolute;
 }
 
 .big-restaurant-picture {
