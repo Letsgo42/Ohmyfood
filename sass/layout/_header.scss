@@ -9,7 +9,7 @@
 
 
 //LOGO AND ARROW DISPLAY ON RESTAURANTS PAGES
-header {
+#restaurant-header {
   @include flex-center;
   justify-content: flex-start;
   position: relative;

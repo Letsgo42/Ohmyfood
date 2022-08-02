@@ -138,14 +138,14 @@ footer ul .icon-item .footer-icon {
   font-size: 18px;
 }
 
-header {
+#restaurant-header {
   display: flex;
   justify-content: center;
   align-items: center;
   justify-content: flex-start;
   position: relative;
 }
-header a {
+#restaurant-header a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -156,10 +156,10 @@ header a {
   width: auto;
   color: rgb(70, 70, 70);
 }
-header a .header-arrow {
+#restaurant-header a .header-arrow {
   font-size: 25px;
 }
-header .logo {
+#restaurant-header .logo {
   display: flex;
   justify-content: center;
   align-items: center;
