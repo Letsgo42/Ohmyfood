@@ -664,7 +664,7 @@ footer ul .icon-item .footer-icon {
   animation-name: loader;
   animation-timing-function: ease;
   animation-fill-mode: forwards;
-  animation-duration: 5s;
+  animation-duration: 3s;
 }
 .loader .plate {
   display: flex;
@@ -675,7 +675,7 @@ footer ul .icon-item .footer-icon {
   border: 4px solid #4acbab;
   border-radius: 50%;
   box-shadow: 0 0 0 0 rgb(153, 226, 208);
-  animation: plate 600ms infinite 2s forwards;
+  animation: plate 600ms infinite 800ms forwards;
 }
 .loader .plate__inner {
   display: flex;
@@ -695,7 +695,7 @@ footer ul .icon-item .footer-icon {
   opacity: 0;
 }
 .loader .plate__inner .oh {
-  animation: oh 1s cubic-bezier(0.23, 1, 0.32, 1) 500ms forwards;
+  animation: oh 1s cubic-bezier(0.23, 1, 0.32, 1) 100ms forwards;
   color: #9356DC;
 }
 .loader .plate__inner .my {
@@ -703,7 +703,7 @@ footer ul .icon-item .footer-icon {
   color: #FF79DA;
 }
 .loader .plate__inner .food {
-  animation: food 2s cubic-bezier(0.08, 0.82, 0.28, 1.18) 2s forwards;
+  animation: food 1.7s cubic-bezier(0.08, 0.82, 0.28, 1.18) 700ms forwards;
   color: #9356DC;
 }
 
